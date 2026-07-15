@@ -50,3 +50,13 @@ print(f" Best student is {students[Best]} with totals marks of {totals[Best]} an
 
 worst = np.argmin(totals)
 print(f" Worst student is {students[worst]} with totals marks of {totals[worst]} and average marks of {average[worst]:.2f}")
+
+#final ranking system
+
+rankings = np.argsort(totals)[::-1]
+
+print("student rankings")
+
+for i in range(len(students)):
+    rank = f" rank: {i+1} {students[rankings[i]]} AVG:{average[rankings[i]]:.2f}"
+    print(rank)
