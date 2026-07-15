@@ -38,5 +38,15 @@ print("student_averages",average)
 #final print-format
 
 for i in range(len(students)):
-    output = f"  {students[i]} -> Total: {totals[i]}, Average: {average[i]:2.f}"
+    output = f"  {students[i]} -> Total: {totals[i]}, Average: {average[i]:.2f}"
     print(output)
+
+
+#best student
+Best = np.argmax(totals)
+print(f" Best student is {students[Best]} with totals marks of {totals[Best]} and average marks of {average[Best]:.2f}")
+
+#worst student
+
+worst = np.argmin(totals)
+print(f" Worst student is {students[worst]} with totals marks of {totals[worst]} and average marks of {average[worst]:.2f}")
