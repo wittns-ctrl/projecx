@@ -60,3 +60,21 @@ print("student rankings")
 for i in range(len(students)):
     rank = f" rank: {i+1} {students[rankings[i]]} AVG:{average[rankings[i]]:.2f}"
     print(rank)
+
+# passed students 
+
+passed_students = students[average >= 50]
+
+print('passed students')
+
+for i in range(len(passed_students)):
+    print(passed_students[i])
+
+#failed students
+
+failed_students = students[average < 50]
+
+print('failed students')
+
+for i in range(len(failed_students)):
+    print(failed_students[i])    
